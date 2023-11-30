@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <title>node-oracledb Electron Oracle Database Demo</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <h1>node-oracledb Electron Oracle Database Demo</h1>
+
+  <h3>Database Credentials</h3>
+
+    <p>
+    Username: <input id="un" value="hr" />
+    Password: <input type="password" id="pw" value="welcome" />
+    Connect String: <input id="cs" value="localhost/freepdb1" />
+    </p>
+    <p>
+    <button class="button" type="button" id="logon">Create connection pool</button>
+    </p>
+
+  <h3>Date</h3>
+
+    <p>
+    The date is: <strong id="dateid">???</strong>
+    </p>
+    <p>
+    <button class="button" type="button" id="datebutton">Query the current date</button>
+    </p>
+
+  <script src='./src/renderer.js'></script>
+</body>
+
+</html>

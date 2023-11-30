@@ -1,0 +1,74 @@
+{
+  "name": "oracledb-electron-demo",
+  "version": "1.0.0",
+  "description": "Electron demo app using node-oracledb and electron-builder",
+  "homepage": "https://oracle.github.io/node-oracledb/",
+  "main": "main.js",
+  "build": {
+    "appId": "com.oracle.node-oracledb.oracledb-electron-demo",
+    "productName": "OracleDBExampleApp",
+    "files": [
+      {
+        "from": ".",
+        "to": ".",
+        "filter": [
+          "css",
+          "img",
+          "src",
+          "main.js",
+          "index.html",
+          "package.json"
+        ]
+      }
+    ],
+    "extends": null,
+    "linux": {
+      "category": "Database",
+      "desktop": {
+        "Comment": "Electron example app for Oracle Database",
+        "Name": "Oracle Database Example App",
+        "StartupNotify": "true",
+        "Terminal": "false",
+        "Type": "Application",
+        "Categories": "Database;Office;"
+      },
+      "executableName": "oracledb-electron-demo",
+      "maintainer": "christopher.jones@oracle.com",
+      "target": [
+        "rpm"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.tools",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "msi"
+      ]
+    },
+    "directories": {
+      "output": "release"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --publish=never",
+    "packmac": "electron-builder --publish=never --universal",
+    "packlinux": "electron-builder --publish=never --linux",
+    "packwin": "electron-builder --publish=never --windows",
+    "test": "npm start"
+  },
+  "author": "Christopher Jones and Sharad Chandran R",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "oracledb": "^6"
+  },
+  "devDependencies": {
+    "electron": "^25",
+    "electron-builder": "^24"
+  }
+}
