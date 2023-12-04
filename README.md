@@ -3,6 +3,8 @@
 This is a demo desktop application connecting to an existing Oracle Database
 using the Node.js module Electron tooling and the node-oracledb module.
 
+See the related blog post [Desktop applications with node-oracledb and electron](https://medium.com/@cjones-oracle/desktop-applications-with-node-oracledb-and-electron-b45db49653c7).
+
 Christopher Jones, November 2023
 
 With thanks to the samples:
@@ -132,8 +134,8 @@ Install the package with:
 
     sudo dnf install -y release/oracledb-electron-demo-1.0.0.x86_64.rpm
 
-Run the application by search for it in the installed applications, or run it
-directly from a terminal window:
+Run the application by searching for it in the installed applications, or run
+it directly from a terminal window:
 
     /opt/OracleDBExampleApp/oracledb-electron-demo
 
